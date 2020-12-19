@@ -20,6 +20,10 @@ app.get('/', (req, res) => {
     res.send('Hello to QR-based System');
 })
 
+app.get('/favico.ico', (req, res) => {
+    res.sendStatus(404);
+});
+
 // const CONNECTION_URL = "mongodb+srv://jaeruzdatiles:CpE_2014@cluster0.qcuoe.mongodb.net/<dbname>?retryWrites=true&w=majority";
 
 const PORT = process.env.PORT || 5000;
