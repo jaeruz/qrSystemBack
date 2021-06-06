@@ -3,7 +3,14 @@ import UserDetails, { postSchema } from "../models/userDetails.js"
 export const getUsers = async (req, res) => {
   try {
     const userDetails = await UserDetails.find()
-
+    res.setHeader(
+      "Access-Control-Allow-Origin",
+      "http://qrsystem.tsrservices.tech"
+    )
+    res.setHeader(
+      "Access-Control-Allow-Headers",
+      "X-Requested-With,content-type"
+    )
     res.status(200).json(userDetails)
   } catch (error) {
     res.status(404).json({ message: error.message })
@@ -28,6 +35,11 @@ export const updateAyuda = async (req, res) => {
 
 export const registerUsers = async (req, res) => {
   const user = req.body
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "http://qrsystem.tsrservices.tech"
+  )
+  res.setHeader("Access-Control-Allow-Headers", "X-Requested-With,content-type")
   try {
     UserDetails.findOne(
       {
