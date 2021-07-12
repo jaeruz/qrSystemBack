@@ -26,7 +26,7 @@ app.get("/favico.ico", (req, res) => {
   res.sendStatus(404)
 })
 
-// const CONNECTION_URL = "mongodb+srv://jaeruzdatiles:CpE_2014@cluster0.qcuoe.mongodb.net/<dbname>?retryWrites=true&w=majority";
+// const CONNECTION_URL = "mongodb+srv://uname:pass@cluster0.qcuoe.mongodb.net/<dbname>?retryWrites=true&w=majority";
 
 const PORT = process.env.PORT || 5000
 
